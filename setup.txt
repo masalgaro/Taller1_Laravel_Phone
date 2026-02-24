@@ -1,0 +1,14 @@
+SETUP.TXT
+
+El presente documento es una versión resumida del setup.md que también viene incluído.
+
+1. Sí es necesario ejecutar 'php artisan migrate'.
+El sitio opera bajo la suposición que existe una base de datos llamada 'Phone', donde se guardan todos los registros de los telefónos. Para que las migraciones funcionen, es necesario crear esta base de datos. Se puede hacer sin problemas con XAMPP en phpmyadmin.
+
+2. El resto del proyecto funciona 100% desde el sitio web, no es necesario crear nada más.
+
+Como aclaraciones adicionales:
+
+A la hora de crear un nuevo telefóno (mostrado en la página como 'Create Phone Listing'), es necesario llenar todos los campos, con el último solicitando una URL de una imágen. Esto se decidió por flexibilidad y rápidez, ya que permite utilizar imágenes de diversas partes del internet sin necesidad de descargar archivos (además de que las imágenes que se encuentren en public aún se podrían acceder por una URL).
+Sería 100% posible modificar el formulario para usar <input type="image">.
+
