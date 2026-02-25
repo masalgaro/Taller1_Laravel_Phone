@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Phone;
-use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Illuminate\Http;
 
 class PhoneController extends Controller
 {
@@ -22,8 +22,8 @@ class PhoneController extends Controller
     {
         $viewData = [];
         $phone = Phone::findOrFail($id);
-        $viewData['title'] = $phone['name'];
-        $viewData['subtitle'] = $phone['name'].' phone details';
+        $viewData['title'] = $phone->getName();
+        $viewData['subtitle'] = $phone->getName().' phone details';
         $viewData['phone'] = $phone;
 
         return view('phone.show')->with('viewData', $viewData);
@@ -37,7 +37,7 @@ class PhoneController extends Controller
         return view('phone.create')->with('viewData', $viewData);
     }
 
-    public function save(Request $request): \Illuminate\Http\RedirectResponse
+    public function save(Request $request): RedirectResponse
     {
         Phone::validate($request);
 

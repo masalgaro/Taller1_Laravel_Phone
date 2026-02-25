@@ -5,22 +5,22 @@
 <div class="card mb-3">
     <div class="row g-0">
         <div class="col-md-4">
-            <img src="{{ $viewData['phone']['picurl'] }}" class="img-fluid rounded-start">
+            <img src="{{ $viewData['phone']->getPicURL() }}" class="img-fluid rounded-start">
         </div>
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">
-                    {{ $viewData['phone']['name'] }}
+                    {{ $viewData['phone']->getName() }}
                 </h5>
-                <p class="card-text">Brand: <strong>{{ $viewData['phone']['brand'] }}</strong></p>
-                <p class="card-text">Quantity: <strong>{{ $viewData['phone']['quantity'] }}</strong></p>
-                <p class="card-text">Battery Specs: <strong>{{ $viewData['phone']['battery'] }}</strong></p>
-                <p class="card-text">RAM: <strong>{{ $viewData['phone']['ram'] }}</strong></p>
-                <p class="card-text">Internal Memory: <strong>{{ $viewData['phone']['memory'] }}</strong></p>
+                <p class="card-text">Brand: <strong>{{ $viewData['phone']->getBrand() }}</strong></p>
+                <p class="card-text">Quantity: <strong>{{ $viewData['phone']->getQuantity() }}</strong></p>
+                <p class="card-text">Battery Specs: <strong>{{ $viewData['phone']->getBattery() }}</strong></p>
+                <p class="card-text">RAM: <strong>{{ $viewData['phone']->getRAM() }}</strong></p>
+                <p class="card-text">Internal Memory: <strong>{{ $viewData['phone']->getMemory() }}</strong></p>
             </div>
         </div>
     </div>
-    <form action="{{ route('phone.delete', $viewData['phone']['id']) }}" method="POST">
+    <form action="{{ route('phone.delete', $viewData['phone']->getId()) }}" method="POST">
         @csrf
         @method('DELETE')
         <button class="btn btn-danger">

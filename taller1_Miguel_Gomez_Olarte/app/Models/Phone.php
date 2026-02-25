@@ -40,7 +40,7 @@ class Phone extends Model
         return $this->attributes['id'];
     }
 
-    public function setId($id): void
+    public function setId(int $id): void
     {
         $this->attributes['id'] = $id;
     }
@@ -50,7 +50,7 @@ class Phone extends Model
         return $this->attributes['name'];
     }
 
-    public function setName($name): void
+    public function setName(string $name): void
     {
         $this->attributes['name'] = $name;
     }
@@ -60,7 +60,7 @@ class Phone extends Model
         return $this->attributes['brand'];
     }
 
-    public function setBrand($brand): void
+    public function setBrand(string $brand): void
     {
         $this->attributes['brand'] = $brand;
     }
@@ -70,7 +70,7 @@ class Phone extends Model
         return $this->attributes['quantity'];
     }
 
-    public function setQuantity($quantity): void
+    public function setQuantity(int $quantity): void
     {
         $this->attributes['quantity'] = $quantity;
     }
@@ -80,7 +80,7 @@ class Phone extends Model
         return $this->attributes['battery'];
     }
 
-    public function setBattery($battery): void
+    public function setBattery(string $battery): void
     {
         $this->attributes['battery'] = $battery;
     }
@@ -90,7 +90,7 @@ class Phone extends Model
         return $this->attributes['ram'];
     }
 
-    public function setRAM($ram): void
+    public function setRAM(string $ram): void
     {
         $this->attributes['ram'] = $ram;
     }
@@ -100,7 +100,7 @@ class Phone extends Model
         return $this->attributes['memory'];
     }
 
-    public function setMemory($memory): void
+    public function setMemory(string $memory): void
     {
         $this->attributes['memory'] = $memory;
     }
@@ -110,7 +110,7 @@ class Phone extends Model
         return $this->attributes['picurl'];
     }
 
-    public function setPicURL($picurl): void
+    public function setPicURL(string $picurl): void
     {
         $this->attributes['picurl'] = $picurl;
     }
